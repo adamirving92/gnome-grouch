@@ -4,12 +4,8 @@ Oscar pops out of the dock's Trash icon when the Trash becomes empty, bringing
 the classic Macintosh effect to GNOME. The watcher never moves, restores,
 deletes, or empties files itself.
 
-![Oscar emerging from the Trash in GNOME](docs/images/demo.gif)
-
-*Silent demo on GNOME 50.*
-
-This repository contains the Linux code and the demo above. Original asset
-files must be supplied locally; they are excluded from Git. See
+This repository contains the Linux code. Original asset files must be supplied
+locally; they are excluded from Git. See
 [ATTRIBUTION.md](ATTRIBUTION.md).
 
 ## Requirements
@@ -119,6 +115,6 @@ remain byte-identical and the two WAV mixes use the original volume settings.
 ## License
 
 [MIT](LICENSE) for the newly written Linux code, tools, configuration, and
-documentation. The original character, artwork, and recordings, including
-artwork visible in the demo GIF, are excluded from that license. Original asset
-files are supplied locally and are not included here.
+documentation. The original character, artwork, and recordings are excluded
+from that license. Original asset files are supplied locally and are not
+included here.
