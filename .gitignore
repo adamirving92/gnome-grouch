@@ -7,5 +7,10 @@ __pycache__/
 # Local packaging and preview outputs.
 *.zip
 *.png
+*.gif
 *.wav
 *.mp3
+
+# Public documentation images.
+!/docs/images/preferences.png
+!/docs/images/demo.gif

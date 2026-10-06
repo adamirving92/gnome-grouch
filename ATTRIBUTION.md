@@ -23,7 +23,14 @@ upstream project or as permission from the owners of the original character,
 artwork, or recordings.
 
 Oscar the Grouch and the original Sesame Street artwork and recordings remain
-the material of their respective rights holders. No original PNG, audio,
-sprite sheet, screenshot, or Mac binary is included in this repository. The
-MIT license here covers only the newly written Linux code, tools,
-configuration, and documentation. This is an unofficial nostalgia project.
+the material of their respective rights holders. No original asset files,
+audio, sprite sheet, or Mac binary are included in this repository.
+
+The silent demo GIF illustrates this GNOME implementation running with locally
+supplied artwork. The original character and artwork visible in that screen
+recording are excluded from the MIT license. The preferences screenshot shows
+the newly written Linux interface.
+
+The MIT license here covers only the newly written Linux code, tools,
+configuration, and documentation, excluding the original material described
+above. This is an unofficial nostalgia project.

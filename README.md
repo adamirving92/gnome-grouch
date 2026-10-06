@@ -4,13 +4,18 @@ Oscar pops out of the dock's Trash icon when the Trash becomes empty, bringing
 the classic Macintosh effect to GNOME. The watcher never moves, restores,
 deletes, or empties files itself.
 
-This repository contains the Linux code. Original artwork and audio must be
-supplied locally; they are excluded from Git. See [ATTRIBUTION.md](ATTRIBUTION.md).
+![Oscar emerging from the Trash in GNOME](docs/images/demo.gif)
+
+*Silent demo on GNOME 50.*
+
+This repository contains the Linux code and the demo above. Original asset
+files must be supplied locally; they are excluded from Git. See
+[ATTRIBUTION.md](ATTRIBUTION.md).
 
 ## Requirements
 
 - GNOME Shell 50; verified on Ubuntu 26.04 with GNOME Shell 50.1 and Ubuntu Dock.
-- Python 3 and FFmpeg for importing locally supplied assets.
+- Git to download the repository; Python 3 and FFmpeg for importing locally supplied assets.
 - PipeWire's `pw-play` for sound.
 - GNOME's usual `gjs`, `glib-compile-schemas`, `gsettings`, and `gnome-extensions` tools.
 
@@ -18,6 +23,13 @@ This is a GNOME extension. Other distributions using GNOME 50 may work, but
 have not been verified. KDE, Xfce, Cinnamon, and MATE are not supported.
 
 ## Install
+
+Start by downloading this extension:
+
+```sh
+git clone https://github.com/adamirving92/gnome-grouch.git
+cd gnome-grouch
+```
 
 Obtain a local copy of Charlie Robin's [version 2 source at commit
 0d588d7f37fd7a58a2bd972d9ad2c68f97036858](https://github.com/charlierobin/oscar-the-grouch-version-2/tree/0d588d7f37fd7a58a2bd972d9ad2c68f97036858)
@@ -46,12 +58,38 @@ Click the top-bar Trash indicator and choose **Preview Oscar** to see and hear
 the animation without deleting anything. The menu also provides a sound toggle
 and preferences for volume, alternating clips, and fallback size.
 
+![The Grouch preferences: animation preview, voice controls, and fallback size](docs/images/preferences.png)
+
 ```sh
 gnome-extensions prefs grouch@local
 gnome-extensions disable grouch@local
 gnome-extensions enable grouch@local
 gnome-extensions uninstall grouch@local
 ```
+
+## Nothing appeared?
+
+After installing for the first time, log out and back in, then check:
+
+```sh
+gnome-extensions info grouch@local
+```
+
+The extension should show **Enabled: Yes** and **State: ACTIVE**. Open its
+top-bar Trash menu and choose **Preview Oscar**. You can also open preferences
+with `gnome-extensions prefs grouch@local` and click **Preview**.
+
+If your desktop has disabled all user extensions, turn them back on in GNOME's
+Extensions app, or run:
+
+```sh
+gsettings set org.gnome.shell disable-user-extensions false
+```
+
+If preview works but a hidden dock does not show Oscar at its Trash icon, look
+in the bottom-right corner of your main display. For missing sound, check the
+sound switch and voice volume in preferences, your system mute and audio output,
+and whether `pw-play` is installed.
 
 ## Behavior and limitations
 
@@ -81,5 +119,6 @@ remain byte-identical and the two WAV mixes use the original volume settings.
 ## License
 
 [MIT](LICENSE) for the newly written Linux code, tools, configuration, and
-documentation. Original character, artwork, and recordings are excluded from
-that license and from this repository.
+documentation. The original character, artwork, and recordings, including
+artwork visible in the demo GIF, are excluded from that license. Original asset
+files are supplied locally and are not included here.
