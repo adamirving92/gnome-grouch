@@ -1,0 +1,11 @@
+# Original artwork and audio are supplied locally, never committed.
+/assets
+/schemas/gschemas.compiled
+__pycache__/
+*.pyc
+
+# Local packaging and preview outputs.
+*.zip
+*.png
+*.wav
+*.mp3

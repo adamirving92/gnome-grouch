@@ -1,0 +1,9 @@
+{
+  "uuid": "grouch@local",
+  "name": "The Grouch",
+  "description": "Oscar pops out of the Trash when it becomes empty, with the classic Macintosh animation and sound.",
+  "shell-version": ["50"],
+  "settings-schema": "org.gnome.shell.extensions.grouch-linux",
+  "version": 1,
+  "url": "https://github.com/adamirving92/gnome-grouch"
+}

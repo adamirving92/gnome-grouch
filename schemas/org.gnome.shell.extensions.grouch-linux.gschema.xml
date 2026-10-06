@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.grouch-linux" path="/org/gnome/shell/extensions/grouch-linux/">
+    <key name="sound-enabled" type="b">
+      <default>true</default>
+      <summary>Play Oscar's voice</summary>
+    </key>
+    <key name="volume" type="i">
+      <range min="0" max="100"/>
+      <default>75</default>
+      <summary>Voice volume</summary>
+    </key>
+    <key name="animation-size" type="i">
+      <range min="48" max="320"/>
+      <default>128</default>
+      <summary>Animation width when no dock Trash icon is visible</summary>
+    </key>
+    <key name="fallback-corner" type="s">
+      <choices><choice value="bottom-right"/><choice value="bottom-left"/></choices>
+      <default>'bottom-right'</default>
+      <summary>Corner to use when the dock Trash icon is unavailable</summary>
+    </key>
+    <key name="alternate-quotes" type="b">
+      <default>true</default>
+      <summary>Alternate the two classic voice clips</summary>
+    </key>
+    <key name="preview-token" type="i">
+      <default>0</default>
+      <summary>Change this value to preview Oscar without emptying the Trash</summary>
+    </key>
+  </schema>
+</schemalist>
